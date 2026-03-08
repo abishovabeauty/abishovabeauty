@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abishova Beauty</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Abishova Beauty</div>
+    <div class="scroll-menu" id="scrollMenu">
+      <span id="currentPage">Ana Sayfa</span>
+      <button class="burger" onclick="toggleScroll()">☰</button>
+      <div id="scrollItems" class="scroll-items">
+        <button onclick="openPage('urunler.html')">Ürünler</button>
+        <button onclick="openPage('sosyal.html')">Sosyal Medya</button>
+        <button onclick="openPage('kampanya.html')">Kampanyalar</button>
+        <button onclick="adminLogin()">Admin</button>
+      </div>
+      <button class="close-scroll" onclick="toggleScroll()">✕</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="hero">
+    <div class="hero-text">
+      <h1>Abishova Beauty'e Hoş Geldiniz</h1>
+      <p>Cildinizin doğal güzelliğini ortaya çıkarmak için<br>
+      özenle seçilmiş kozmetik ürünleri.</p>
+      <p>Güzelliğinizi koruyun, ışıltınızı ortaya çıkarın.</p>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
