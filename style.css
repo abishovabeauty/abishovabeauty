@@ -20,7 +20,7 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, .logo-text {
+h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
 
@@ -29,7 +29,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 8%;
+    padding: 10px 8%;
     background-color: var(--white);
     border-bottom: 1px solid var(--soft-gold);
     position: sticky;
@@ -39,27 +39,25 @@ nav {
 
 .logo-container {
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    align-items: center;
 }
 
-.logo-text {
-    font-size: 22px;
-    letter-spacing: 5px;
-    color: var(--gold);
-    font-weight: bold;
+.main-logo {
+    height: 80px;
+    width: auto;
+    transition: transform 0.3s ease;
 }
 
-.logo-sub {
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: var(--dark);
+.main-logo:hover {
+    transform: scale(1.05);
 }
 
 nav ul {
     display: flex;
     list-style: none;
     gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
@@ -68,6 +66,8 @@ nav ul li a {
     font-size: 13px;
     letter-spacing: 1px;
     transition: 0.3s;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 nav ul li a:hover {
