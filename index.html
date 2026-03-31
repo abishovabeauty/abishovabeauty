@@ -1,38 +1,85 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abishova Beauty</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abishova Beauty | Lüksün Adresi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="logo">Abishova Beauty</div>
-    <div class="scroll-menu" id="scrollMenu">
-      <span id="currentPage">Ana Sayfa</span>
-      <button class="burger" onclick="toggleScroll()">☰</button>
-      <div id="scrollItems" class="scroll-items">
-        <button onclick="openPage('urunler.html')">Ürünler</button>
-        <button onclick="openPage('sosyal.html')">Sosyal Medya</button>
-        <button onclick="openPage('kampanya.html')">Kampanyalar</button>
-        <button onclick="adminLogin()">Admin</button>
-      </div>
-      <button class="close-scroll" onclick="toggleScroll()">✕</button>
-    </div>
-  </header>
 
-  <!-- Hero -->
-  <main class="hero">
-    <div class="hero-text">
-      <h1>Abishova Beauty'e Hoş Geldiniz</h1>
-      <p>Cildinizin doğal güzelliğini ortaya çıkarmak için<br>
-      özenle seçilmiş kozmetik ürünleri.</p>
-      <p>Güzelliğinizi koruyun, ışıltınızı ortaya çıkarın.</p>
-    </div>
-  </main>
+    <nav>
+        <div class="logo-container">
+            <span class="logo-text">ABISHOVA</span>
+            <span class="logo-sub">BEAUTY</span>
+        </div>
+        <ul>
+            <li><a href="#home">Ana Sayfa</a></li>
+            <li><a href="#products">Ürünler</a></li>
+            <li><a href="#campaigns">Kampanyalar</a></li>
+            <li><a href="#contact">İletişim</a></li>
+        </ul>
+    </nav>
 
-  <script src="js/main.js"></script>
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h2 class="subtitle">HOŞ GELDİNİZ</h2>
+            <h1>Altın Işıltısını <br><span>Teninizde Hissedin</span></h1>
+            <p>Abishova Beauty ile profesyonel dokunuşlar ve eşsiz formüller bir arada.</p>
+            <a href="#products" class="btn-gold">KOLEKSİYONU KEŞFET</a>
+        </div>
+    </header>
+
+    <section id="campaigns" class="campaign-section">
+        <div class="container">
+            <h2 class="section-title">Özel Fırsatlar</h2>
+            <div class="campaign-grid">
+                <div class="campaign-card">
+                    <div class="tag">YENİ</div>
+                    <h3>Altın Seti %20 İndirim</h3>
+                    <p>İlk alışverişe özel lüks bakım seti fırsatı.</p>
+                    <a href="#" class="link">İncele →</a>
+                </div>
+                <div class="campaign-card gold-bg">
+                    <h3>2 Al 1 Öde</h3>
+                    <p>Tüm ruj serilerinde geçerli gece boyu kalıcılık.</p>
+                    <a href="#" class="link">Hemen Al →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="product-section">
+        <div class="container">
+            <h2 class="section-title">En Çok Tercih Edilenler</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <div class="img-placeholder">CİLT BAKIMI</div>
+                    <h4>Gold Glow Serum</h4>
+                    <span class="price">1.250 TL</span>
+                    <button class="add-to-cart">SEPETE EKLE</button>
+                </div>
+                <div class="product-item">
+                    <div class="img-placeholder">MAKYAJ</div>
+                    <h4>Velvet Matte Lipstick</h4>
+                    <span class="price">450 TL</span>
+                    <button class="add-to-cart">SEPETE EKLE</button>
+                </div>
+                <div class="product-item">
+                    <div class="img-placeholder">PARFÜM</div>
+                    <h4>Signature Essence</h4>
+                    <span class="price">2.100 TL</span>
+                    <button class="add-to-cart">SEPETE EKLE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Abishova Beauty. Tüm Hakları Saklıdır.</p>
+        <div class="socials">Instagram / WhatsApp / Pinterest</div>
+    </footer>
+
 </body>
 </html>
