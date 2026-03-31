@@ -1,73 +1,205 @@
-/* Temel stil */
+/* Temel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #D4AF37; /* Logonun altın rengi */
+    --soft-gold: #f4e8c1;
+    --cream: #fcfaf5;
+    --dark: #2c2c2c;
+    --white: #ffffff;
+}
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fff;
-  color: #000;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--white);
+    color: var(--dark);
+    line-height: 1.6;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #fff;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
-  border-bottom: 1px solid #ddd;
-  z-index: 1000;
+h1, h2, h3, .logo-text {
+    font-family: 'Playfair Display', serif;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #b8860b; /* Gold tonu */
+/* Navigasyon */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--soft-gold);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.scroll-menu {
-  position: relative;
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
-.scroll-items {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 35px;
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 10px;
-  flex-direction: column;
+.logo-text {
+    font-size: 22px;
+    letter-spacing: 5px;
+    color: var(--gold);
+    font-weight: bold;
 }
 
-.scroll-items button {
-  background: none;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 16px;
+.logo-sub {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--dark);
 }
 
-.burger, .close-scroll {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
 
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--gold);
+}
+
+/* Hero Section */
 .hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    height: 90vh;
+    background: radial-gradient(circle, rgba(252,250,245,1) 0%, rgba(244,232,193,0.3) 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
 }
 
-.hero-text h1 {
-  font-size: 36px;
-  color: #b8860b;
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
 }
 
-.hero-text p {
-  font-size: 18px;
-  margin: 10px 0;
+.hero-content h1 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.btn-gold {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: var(--gold);
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    transition: 0.4s;
+    border: 1px solid var(--gold);
+}
+
+.btn-gold:hover {
+    background-color: transparent;
+    color: var(--gold);
+}
+
+/* Bölümler */
+.container { padding: 80px 8%; }
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: var(--gold);
+    margin: 15px auto;
+}
+
+/* Kampanyalar */
+.campaign-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.campaign-card {
+    padding: 40px;
+    border: 1px solid var(--soft-gold);
+    background-color: var(--cream);
+    text-align: center;
+}
+
+.gold-bg {
+    background-color: var(--gold);
+    color: white;
+}
+
+.gold-bg .link { color: white; }
+
+/* Ürünler */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.product-item {
+    text-align: center;
+    transition: 0.3s;
+}
+
+.img-placeholder {
+    height: 350px;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.price {
+    display: block;
+    color: var(--gold);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    background: none;
+    border: 1px solid var(--dark);
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.add-to-cart:hover {
+    background: var(--dark);
+    color: white;
+}
+
+/* Footer */
+footer {
+    padding: 50px;
+    text-align: center;
+    background-color: var(--cream);
+    border-top: 1px solid var(--soft-gold);
 }
